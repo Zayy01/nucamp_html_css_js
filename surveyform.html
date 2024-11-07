@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/survey.css" />
+</head>
+<body>
+    <h1>Enter Your Details Four Our Dating Website</h1>
+    <form class="datingform" action="http://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Your Information</legend>
+            <div>
+                <label for="avatar">Upload Your Image</label>
+                <input type="file" id="avatar" name="avatar" >
+                <p>Image Preview: img id="preview" width="500"
+
+                </p>
+            </div>
+            <div>
+                Last Name: <input type="text" name="LaneName"placeholder="Your Last Name" />
+            </div>
+            <div>
+                Your Email: <input type="email" name="email" placeholder="Your Email Address" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Survery Questions</legend>
+            <div>
+                Favorite Sport:
+                <input type="radio" id="baseball" name="sport" value="baseball" />
+                <label for="baseball">Baseball</label>
+                <input type ="radio" id="rugby" name="sport" value="rugby" /> 
+                <label for="rugby">Rugby</label>
+                <input type="radio" id="snowboarding" name="sport" value="snowboarding" /> 
+                <label for="snowboarding">Snowboarding</label>
+            </div>
+            <div>
+                Your Pets:
+                <input type="checkbox" id="cat" name="pets" value="cat" />
+                <label for ="cat">Cat</label>
+                <input type="checkbox" id="dog" name="pets" value="dog" />
+                <label for ="cat">Cat</label>
+                <input type="checkbox" id="iguana" name="pets" value="iguana" /> 
+                <label for ="iguana">Iguana</label>
+            </div>
+        </fieldset>
+        <input type="submit" id="submit-btn" />
+</form>
+</body>
+</html>
